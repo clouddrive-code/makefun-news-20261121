@@ -18,9 +18,13 @@ Stories verified from AP / Reuters reporting on 21 Nov 2026.
 
 ## How it works
 
-`main.py` (stdlib only, no network, no clock) copies the bundled `news.png` to `/output/entry.png`. The image is 1024x1024, ~117 KB, well under the 1 MiB limit. Two runs write identical bytes (sha256 547f8b1dd251727ca28f62d8f0af7d2dae9c18438697ea2dfd8012b2175a939c), so the deterministic rule is satisfied.
+`main.py` (stdlib only, no network, no clock) copies the bundled `news.png` to `/output/entry.png`. The image is 1024x1024, ~545 KB, well under the 1 MiB limit. Two runs write identical bytes (sha256 531db73b56ed72c62555c6b379eafbff6ceee72923062637d8e0c7d0650f0f28), so the deterministic rule is satisfied.
 
-`news.png` was generated locally by `generate.py` (Pillow, fixed text / colours / layout).
+`news.png` was generated locally by `generate.py` (Pillow composition over four AI-generated illustrations, fixed text / colours / layout).
+
+## v2 (21 Nov 2026)
+
+v1 was text-only with empty white boxes and an unreadable POLAND label, so it was rebuilt as an illustrated front page: a hero illustration of the missile/drone incident over Poland, illustrated thumbnails for Ukraine, COP31 and Wall Street, and a Pillow-drawn night-skyline panel for Denmark/Riyadh. Same six stories and facts, no new facts added. Every body line was measured to fit inside its box, and the final image was visually checked for readability before pushing.
 
 ## Run it
 
